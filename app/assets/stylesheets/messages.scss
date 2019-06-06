@@ -1,0 +1,232 @@
+.message{
+  width: 100vw;
+  background-color: white;
+  display: flex;
+
+  &-side{
+    height: calc(100vh - 120px);
+    background-color: #26499d;
+
+    &-body{
+      height: calc(100vh - 290px);
+      width: 320px;
+      background-color: #4753a2;
+      margin: 10px 20px;
+      box-sizing: border-box;
+      border-radius: 5px;
+
+      &-content{
+        height: 60px;
+        display: flex;
+        border-bottom: solid 2px white;
+        position: relative;
+        margin: 5px 0 5px 0;;
+
+          figure {
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            padding: 0;
+            margin: 0;
+            /* 正方形を用意 */
+            img{
+              border-radius: 50%;
+              width: 60px;
+              height: 50px;
+            }
+          }
+
+        &_name{
+          font-size: 20px;
+          color: white;
+          line-height: 60px;
+          margin-left: 80px;
+
+        }
+
+      }
+
+
+    }
+  }
+
+  &-main{
+    width: 100%;
+    background-color: white;
+
+    &-content{
+      height: calc(100vh - 270px);
+      background-color: #eeeaec;
+      border-radius: 15%;
+      overflow: scroll;
+
+      /* 会話部分 */
+    .line__contents {
+      padding: 10px;
+      overflow: hidden;
+      line-height: 135%;
+      margin: 10px 0;
+
+      &.scroll {
+        height: 500px;
+        overflow-y: scroll;
+      }
+
+      /* 相手の会話 */
+      .line__left {
+        position: relative;
+        display: block;
+        margin-bottom: 5px;
+        max-width: 40%;
+        clear: both;
+
+        /* アイコン画像 */
+        figure {
+          width: 50px;
+          position: absolute;
+          top: 15px;
+          left: 0;
+          padding: 0;
+          margin: 0;
+          /* 正方形を用意 */
+          img{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .line__left-text {
+          margin-left: 70px;
+
+          .name {
+            font-size: 80%;
+            color: #ffffff;
+          }
+        }
+        /* コメントエリア */
+        .text {
+          margin: 0;
+          position: relative;
+          padding: 10px;
+          border-radius: 20px;
+          background-color: #ffffff;
+
+
+          /* 吹き出し */
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            left: -10px;
+            top: 10px;
+            border-right: 20px solid #ffffff;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+          }
+
+        }
+      }
+        /* 自分の会話 */
+        .line__right {
+          position: relative;
+          display: block;
+          margin: 5px 0;
+          max-width: 60%;
+          float: right;
+          margin-right: 15px;
+          clear: both;
+          /* コメントエリア */
+          .text {
+            padding: 10px;
+            border-radius: 20px;
+            background-color: white;
+            margin: 0;
+            margin-left: 80px;
+            /* 吹き出し */
+            // &::after {
+            //   content: '';
+            //   position: absolute;
+            //   display: block;
+            //   width: 0;
+            //   height: 0;
+            //   right: -10px;
+            //   top: 10px;
+            //   border-left: 20px solid black;
+            //   border-top: 10px solid transparent;
+            //   border-bottom: 10px solid transparent;
+            // }
+
+          }
+          /* 自分がスタンプを送る時 */
+          .stamp {
+            position: relative;
+            margin-left: 80px;
+          }
+          /* 既読エリア */
+          .date {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100px;
+            text-align: right;
+            left: -30px;
+            bottom: 0px;
+            font-size: 80%;
+            color: #ffffff;
+          }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    &_form{
+      height: 150px;
+      background-color: #26499d;
+      padding-top: 15px;
+      box-sizing: border-box;
+
+      &-body{
+        height: 100px;
+        background-color: #4753a2;
+        margin-right: 20px;
+        display: flex;
+
+        &_form{
+          height: 60px;
+          width: 100%;
+          background-color: white;
+          margin: 18px;
+          padding: 15px;
+          font-size: 20px;
+          resize: none;
+        }
+
+        &_btn{
+          height: 90px;
+          width: 140px;
+          background-color: #bee0ce;
+          margin: 3px 15px 0 0;
+          padding: 5px 0 0 10px;
+          border-radius: 50%;
+          font-size: 25px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
