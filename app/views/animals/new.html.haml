@@ -1,0 +1,42 @@
+.new-content
+  = form_with model: @animal, local: true, class: "new-content-post" do |f|
+    .new-content-post_image
+      .new-content-post_image_upload
+        =f.label :image, class: "image_upload-box" do
+          = f.file_field :image, class: 'image_upload-photo',multiple: true
+        %p.new-content-post_image_head 写真アップロード
+
+    .new-content-post-index
+      .new-content-post-index_title 名前
+      = f.text_field :name, class: "new-content-post-index_form",placeholder: "ポチ"
+
+    .new-content-post-index
+      .new-content-post-index_title 種類
+      = f.text_field :kind, class: "new-content-post-index_form",placeholder: "雑種"
+
+    .new-content-post-index
+      .new-content-post-index_title 性別
+      = f.text_field :sex, class: "new-content-post-index_form",placeholder: "オス"
+
+    .new-content-post-index
+      .new-content-post-index_title 年齢
+      = f.text_field :age, class: "new-content-post-index_form",placeholder: "4才"
+
+    .new-content-post-index
+      .new-content-post-index_title  時間
+      = f.text_field :time, class: "new-content-post-index_form",placeholder: "2時間"
+
+    .new-content-post-index
+      .new-content-post-index_title  散歩コース
+      = f.text_area :course, class: "new-content-post-index_text", placeholder: "大和川を一周して公園を通っていくコースを中心にお願いしましす。"
+
+    .new-content-post-index
+      .new-content-post-index_title  注意事項
+      = f.text_area :notes, class: "new-content-post-index_text", placeholder: "トイレはお気に入りの、3丁目の電柱でお願いします。"
+
+
+    %button.submit-btn
+      = f.submit '',class: "submit-btn_text"
+      %img{:src => "https://img.icons8.com/metro/26/000000/paper-plane.png"}/
+
+  .new-content__footer

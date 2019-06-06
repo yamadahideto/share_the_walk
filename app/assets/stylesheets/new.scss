@@ -1,0 +1,112 @@
+
+// 投稿画面
+.new-content{
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  background-color: #808080;
+
+  &-post{
+    width: calc(1020px - 320px);
+    font-size: 14px;
+    margin: 80px auto;
+    background: rgba(224,255,255,1);
+    margin-bottom: 60px;
+    border-radius: 5px;
+
+    &_image{
+      height: 250px;
+      width: 100%;
+      border-bottom: 1px solid #e6e6fa;
+      padding: 3px 0;
+
+      &_upload{
+        height: 220px;
+        width: 670px;
+        background-color: #fff;
+        margin: 10px auto;
+        border: solid 1px #d3d3d3;
+
+      }
+    }
+
+    &-index{
+      padding: 20px 70px;
+      justify-content: space-between;
+      border-bottom: 2px solid #e6e6fa;
+      margin-top: 10px;
+      box-sizing: border-box;
+
+      &_title{
+        height: 40px;
+        width: 90px;
+        background-color: #fffaf0;
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+
+      &_text{
+        height: 100px;
+        width: 500px;
+        background-color: white;
+        margin-top: 15px;
+        border-radius: 5px;
+        resize: none;
+        border: solid 2px #d3d3d3;
+        padding-left: 5px;
+      }
+      &_form{
+        // height: 40px;
+        // width: 550px;
+        // background-color: white;
+        // margin-top: 10px;
+      }
+    }
+  }
+  &__footer{
+    height: 200px;
+  }
+}
+
+
+ .submit-btn{
+        position: fixed;
+        bottom: 30px;
+        right: 300px;
+        z-index: 1000;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #1e90ff;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .submit-btn a {
+          text-decoration: none;
+          color: white;
+          font-size: 22px;
+          margin: 100px;
+
+        }
+
+        .submit-btn:hover {
+          opacity: 0.8;
+          text-decoration: none
+        }
+
+        .submit-btn_text{
+          background-color: #1e90ff;
+          font-size: 20px;
+          border-radius: 50%;
+          border-style: none;
+          color: white;
+
+        }
+      }

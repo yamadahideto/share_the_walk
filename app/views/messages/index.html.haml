@@ -1,0 +1,77 @@
+
+.message
+  .message-side
+    .message-side-body
+      .message-side-body-content
+        %figure
+          %img{:src => "https://image.dcnews.jp/upload/20180314/images/google.jpg"}/
+        .message-side-body-content_names
+          = link_to "Google", "#", class: "message-side-body-content_name"
+
+      .message-side-body-content
+        %figure
+          %img{:src => "https://image.dcnews.jp/upload/20180314/images/google.jpg"}/
+        .message-side-body-content_names
+          = link_to "Google", "#", class: "message-side-body-content_name"
+
+  .message-main
+    .message-main-content
+      .line__contents
+        .line__left
+          %figure
+            %img{:src => "https://www.pakutaso.com/shared/img/thumb/TSURU170308-015_TP_V.jpg"}/
+
+          .line__left-text
+            .name うさきち
+            .text ねぇねぇ、帰ってくるのおそいんだけど！！今どこいまどこいまどこーー
+        / 相手のスタンプ
+        .line__left
+          .stamp
+            %img{:src => "https://ea6gprpmrum8pl.cdn.jp.idcfcloud.com/stamp-ap/media/opt/WYOSHI14023/WYOSHI14023.jpg"}/
+
+        / 相手の吹き出し
+        .line__left
+          %figure
+            %img{:src => "https://www.pakutaso.com/shared/img/thumb/TSURU170308-015_TP_V.jpg"}/
+
+          .line__left-text
+            .name うさきち
+            .text 今から帰るよー
+        / 自分の吹き出し
+        .line__right
+          .text 了解！寝過ごさないようにだよ〜風呂ためとこ
+          %span.date
+            既読
+            %br>/
+            0:30
+
+        .line__right
+          .text お腹すいたなー
+          %span.date
+            既読
+            %br>/
+            0:30
+
+        / 自分のスタンプ
+        .line__right
+          .stamp
+            -# %img{:src => "./stamp/22.png"}/
+            %img{:src => "https://pbs.twimg.com/profile_images/931535351595745287/6iool2iX_400x400.jpg"}/
+
+          %span.date
+            既読
+            %br>/
+            0:30
+        / 　▲会話エリア ここまで
+
+    -# フォーム
+    = form_with model: @message, local: true, class: "message-main_form" do |f|
+      .message-main_form-body
+        = f.text_area :name, class: "message-main_form-body_form",placeholder: "write something..."
+        %btn.message-main_form-body_btn
+          send
+          %img{:src => "https://img.icons8.com/color/46/000000/paper-plane.png"}/
+
+
+
+

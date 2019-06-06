@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShareTheWalk
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css", :rel => "stylesheet"}/
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
+    %link{:href => "https://fonts.googleapis.com/css?family=VT323", :rel => "stylesheet"}/
+  %body
+    .header
+      .header-icon
+        = link_to new_animal_path do
+          %img{src: "https://img.icons8.com/ios/50/000000/dog-park.png"}/
+
+        = link_to messages_path do
+          %img{src: "https://img.icons8.com/ios/50/000000/communication.png"}/
+
+      .header-title
+        = link_to "Share The Walk", root_path
+    = yield
