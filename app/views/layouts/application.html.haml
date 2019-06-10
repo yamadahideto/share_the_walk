@@ -11,8 +11,6 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
     %link{:href => "https://fonts.googleapis.com/css?family=VT323", :rel => "stylesheet"}/
   %body
-    %p.notice= notice
-    %p.alert= alert
 
     .header
       .header-icon
@@ -24,4 +22,11 @@
 
       .header-title
         = link_to "Share The Walk", root_path
+
+      .header-icon
+        = link_to new_user_session_path do
+          %img{src: "https://img.icons8.com/color/48/000000/enter-2.png"}/
+
+        = link_to destroy_user_session_path, method: :delete do
+          %img{src: "https://img.icons8.com/color/48/000000/exit.png"}/
     = yield

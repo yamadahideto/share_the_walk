@@ -66,7 +66,7 @@
     = form_with model: @message, local: true, class: "message-main_form" do |f|
       .message-main_form-body
         = f.text_area :content, class: "message-main_form-body_form",placeholder: "write something..."
-        %button.message-main_form-body_form_btn{:type => "submit"}
+        %button.message-main_form-body_btn{:type => "submit"}
           %img{:src => "https://img.icons8.com/color/46/000000/paper-plane.png"}/
         -# = f.submit 'send',class: "submit-btn_text"
 

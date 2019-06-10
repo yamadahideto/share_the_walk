@@ -214,67 +214,64 @@
           resize: none;
         }
 
-        .submit-btn{
-        position: fixed;
-        bottom: 30px;
-        right: 300px;
-        z-index: 1000;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        background: #1e90ff;
-        color: #fff;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-        .submit-btn a {
-          text-decoration: none;
-          color: white;
-          font-size: 22px;
-          margin: 100px;
-
-        }
-
-        .submit-btn:hover {
-          opacity: 0.8;
-          text-decoration: none
-        }
-
-        .submit-btn_text{
-          background-color: #1e90ff;
-          font-size: 20px;
-          border-radius: 50%;
-          border-style: none;
-          color: white;
-
-        }
-      }
-
-
-
-
-
         &_btn{
-          height: 90px;
-          width: 140px;
-          background-color: #bee0ce;
-          margin: 3px 15px 0 0;
-          padding: 5px 0 0 10px;
+          width: 80px;
+          height: 80px;
           border-radius: 50%;
-          font-size: 30px;
-          font-family: 'VT323', monospace;
-          color: white;
+          background: #1e90ff;
+          color: #fff;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px 15px 0 0;
           cursor: pointer;
 
-          .submit-btn_text{
+          .submit-btn a {
             text-decoration: none;
-            background-color: #bee0ce;
+            color: white;
+            font-size: 22px;
+            margin: 100px;
+
+          }
+
+          .submit-btn:hover {
+            opacity: 0.8;
+            text-decoration: none
+          }
+
+          .submit-btn_text{
+            background-color: #1e90ff;
+            font-size: 20px;
+            border-radius: 50%;
             border-style: none;
+            color: white;
+
           }
         }
+
+
+
+
+
+        // &_btn{
+        //   height: 90px;
+        //   width: 140px;
+        //   background-color: #bee0ce;
+        //   margin: 3px 15px 0 0;
+        //   padding: 5px 0 0 10px;
+        //   border-radius: 50%;
+        //   font-size: 30px;
+        //   font-family: 'VT323', monospace;
+        //   color: white;
+        //   cursor: pointer;
+
+        //   .submit-btn_text{
+        //     text-decoration: none;
+        //     background-color: #bee0ce;
+        //     border-style: none;
+        //   }
+        // }
       }
     }
   }
