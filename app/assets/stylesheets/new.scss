@@ -48,6 +48,7 @@
         border-radius: 5px;
       }
 
+
       &_text{
         height: 100px;
         width: 500px;
@@ -59,10 +60,11 @@
         padding-left: 5px;
       }
       &_form{
-        // height: 40px;
-        // width: 550px;
-        // background-color: white;
-        // margin-top: 10px;
+        height: 40px;
+        width: 550px;
+        background-color: white;
+        margin-top: 10px;
+        padding-left: 10px;
       }
     }
   }

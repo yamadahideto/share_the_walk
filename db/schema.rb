@@ -10,19 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_073214) do
+ActiveRecord::Schema.define(version: 2019_06_07_095602) do
 
   create_table "animals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
-    t.string "name"
-    t.string "kind"
-    t.string "sex"
-    t.integer "age"
-    t.integer "time"
+    t.string "name", null: false
+    t.string "kind", null: false
+    t.string "sex", null: false
+    t.string "age", null: false
+    t.string "time", null: false
     t.text "course"
     t.text "notes"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_animals_on_user_id"
   end
 
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
+    t.string "image"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "phonetic", null: false
+    t.string "email", null: false
+    t.string "encrypted_password", null: false
+    t.string "prefecture", null: false
+    t.string "city", null: false
+    t.string "municipalities", null: false
+    t.integer "phone_number", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "animals", "users"
+  add_foreign_key "messages", "users"
 end

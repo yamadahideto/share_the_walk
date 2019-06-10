@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
   root 'animals#index'
-  resources :animals
+
+  devise_for :users
+
   resources :messages
+  resources :animals
 end

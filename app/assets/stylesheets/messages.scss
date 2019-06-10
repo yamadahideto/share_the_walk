@@ -52,12 +52,11 @@
 
   &-main{
     width: 100%;
-    background-color: white;
 
     &-content{
       height: calc(100vh - 270px);
       background-color: #eeeaec;
-      border-radius: 15%;
+
       overflow: scroll;
 
       /* 会話部分 */
@@ -106,7 +105,7 @@
         }
         /* コメントエリア */
         .text {
-          margin: 0;
+          margin-bottom: 5px;
           position: relative;
           padding: 10px;
           border-radius: 20px;
@@ -126,7 +125,6 @@
             border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
           }
-
         }
       }
         /* 自分の会話 */
@@ -143,21 +141,21 @@
             padding: 10px;
             border-radius: 20px;
             background-color: white;
-            margin: 0;
-            margin-left: 80px;
+            margin: 0 0 10px 80px;;
+            // margin-left: 80px;
             /* 吹き出し */
-            // &::after {
-            //   content: '';
-            //   position: absolute;
-            //   display: block;
-            //   width: 0;
-            //   height: 0;
-            //   right: -10px;
-            //   top: 10px;
-            //   border-left: 20px solid black;
-            //   border-top: 10px solid transparent;
-            //   border-bottom: 10px solid transparent;
-            // }
+            &::after {
+              // content: '';
+              position: absolute;
+              display: block;
+              width: 0;
+              height: 0;
+              right: -10px;
+              top: 10px;
+              border-left: 20px solid black;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+            }
 
           }
           /* 自分がスタンプを送る時 */
@@ -167,15 +165,16 @@
           }
           /* 既読エリア */
           .date {
-            content: '';
+            // content: '';
             position: absolute;
             display: block;
             width: 100px;
             text-align: right;
-            left: -30px;
+            left: -20px;
+            top: 7px;
             bottom: 0px;
-            font-size: 80%;
-            color: #ffffff;
+            font-size: 70%;
+            color: black;
           }
         }
     }
@@ -206,7 +205,7 @@
         display: flex;
 
         &_form{
-          height: 60px;
+          height: 30px;
           width: 100%;
           background-color: white;
           margin: 18px;
@@ -215,6 +214,49 @@
           resize: none;
         }
 
+        .submit-btn{
+        position: fixed;
+        bottom: 30px;
+        right: 300px;
+        z-index: 1000;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #1e90ff;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .submit-btn a {
+          text-decoration: none;
+          color: white;
+          font-size: 22px;
+          margin: 100px;
+
+        }
+
+        .submit-btn:hover {
+          opacity: 0.8;
+          text-decoration: none
+        }
+
+        .submit-btn_text{
+          background-color: #1e90ff;
+          font-size: 20px;
+          border-radius: 50%;
+          border-style: none;
+          color: white;
+
+        }
+      }
+
+
+
+
+
         &_btn{
           height: 90px;
           width: 140px;
@@ -222,9 +264,16 @@
           margin: 3px 15px 0 0;
           padding: 5px 0 0 10px;
           border-radius: 50%;
-          font-size: 25px;
+          font-size: 30px;
+          font-family: 'VT323', monospace;
           color: white;
           cursor: pointer;
+
+          .submit-btn_text{
+            text-decoration: none;
+            background-color: #bee0ce;
+            border-style: none;
+          }
         }
       }
     }
