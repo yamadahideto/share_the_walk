@@ -10,7 +10,6 @@ class CreateAnimals < ActiveRecord::Migration[5.2]
       t.text        :course                    #散歩コース
       t.text        :notes                     #注意事項
       t.references  :user,     foreign_key: true
-      # t.references  :message,  foreign_key: true
       t.timestamps
     end
   end

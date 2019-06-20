@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :animals
   has_many :messages
+  has_many :rooms, through: :user_rooms
+  has_many :user_rooms
 end

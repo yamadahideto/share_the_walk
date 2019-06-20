@@ -19,6 +19,6 @@ class AnimalsController < ApplicationController
 
   private
   def create_params
-    params.require(:animal).permit(:image, :name, :kind, :sex, :age, :time, :course, :notes)
+    params.require(:animal).permit(:image, :name, :kind, :sex, :age, :time, :course, :notes).merge(user_id: current_user.id)
   end
 end
