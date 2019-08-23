@@ -1,0 +1,8 @@
+.message
+  .message-side
+    .message-side-body
+      .message-side-body-content
+        %figure
+          %img{:src => "https://image.dcnews.jp/upload/20180314/images/google.jpg"}/
+        .message-side-body-content_names
+          = link_to "Google", "/rooms/#{current_user.id}/messages", class: "message-side-body-content_name"

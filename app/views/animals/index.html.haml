@@ -3,8 +3,11 @@
     .col.s12.m7
       .card
         .card-image{style: :"background-image: url(#{animal.image});"}
-        %span.card-title= animal.name
+        %span.card-title
+          = animal.name
         .card-content
-          %p= animal.notes
+          %p 散歩時間
+          = animal.time
         .card-action
-          = link_to " プロフィール", "#"
+          -# = link_to "プロフィール","＃"
+          = link_to "プロフィール","/animals/#{animal.id}"

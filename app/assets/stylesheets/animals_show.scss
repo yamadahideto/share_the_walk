@@ -1,0 +1,95 @@
+
+// 動物詳細ページ
+.details-content{
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  background-color: #808080;
+
+  &_main {
+    width: calc(1020px - 320px);
+    font-size: 14px;
+    margin: 0 auto;
+    background-color: #a5a5a5;
+    margin-bottom: 60px;
+
+    &_header {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      box-sizing: border-box;
+      & h3{
+        text-align: center;
+        color: #7fffd4;
+      }
+    }
+
+    &-body {
+      padding: 64px;
+
+      &-image {
+        padding-bottom: 30px;
+        .detail_image-box{
+          background-size: cover;
+          height: 400px;
+          width: 100%;
+          border-radius: 50%;
+
+        }
+      }
+
+      &-title {
+        clear: both;
+        font-weight: normal;
+        margin-top: 40px;
+
+        &_info {
+          height: 30px;
+          width: 80px;
+          margin-left: 15px;
+          color: black;
+          border-radius: 2px;
+          font-size: 12px;
+          background-color: #7fffd4;
+          text-align: center;
+        }
+        &_content {
+          display: inline-block;
+          margin-left: 10px;
+          margin-top: 20px;
+        }
+        &_text{
+          min-height: 100px;
+          width: 100%;
+          background-color: #fff;
+          border: 1px solid #26499d;
+          padding: 5px 0 0 5px;
+          margin-top: 20px;
+        }
+      }
+
+      &_btn {
+        width: 100%;
+        padding: 0 30px;
+
+        .edit-btn {
+          background: #0068b7;
+          border: 4px solid #26499d;
+          color: #fff;
+          width: 100%;
+          height: 60px;
+          line-height: 48px;
+          font-weight: normal;
+          margin: 40px auto;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .label {
+    font-weight: bold;
+  }
+}

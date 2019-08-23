@@ -14,7 +14,26 @@ class AnimalsController < ApplicationController
 
 
   def show
-    @animal = Animal.find_by(id: 1)
+    @animal = Animal.find(params[:id])
+    @currentUser = UserRoom.where(user_id: current_user.id)
+    @animalUser = UserRoom.where(user_id: @animal.user_id)
+
+    if @animal.user_id == current_user.id
+    else
+      @currentUser.each do |cu|
+        @animalUser.each do |u|
+          if cu.room_id == u.room_id then
+            @isRoom = true
+            @roomId = cu.room_id
+          end
+        end
+      end
+      if @isRoom
+      else
+        @rooms = Room.new
+        @user_rooms = UserRoom.new
+      end
+    end
   end
 
   private

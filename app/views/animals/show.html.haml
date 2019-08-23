@@ -3,31 +3,46 @@
     .details-content_main_header
       %h3 プロフィール
     .details-content_main-body
-      - @animal.each do |animal|
-        .details-content_main-body-image
-          = image_tag src="https://publicdomainq.net/images/201802/28s/publicdomainq-0019419ubx.jpg", class:"detail_image-box"
+      .details-content_main-body-image
+        .detail_image-box{style: :"background-image: url(#{@animal.image});"}
+        -# = image_tag src="https://publicdomainq.net/images/201802/28s/publicdomainq-0019419ubx.jpg", class:"detail_image-box"
 
-        .details-content_main-body-title
-          .label.details-content_main-body-title_info 名前
-          .details-content_main-body-title_content=animal.name
-        .details-content_main-body-title
-          .label.details-content_main-body-title_info 年齢
-          .details-content_main-body-title_content=animal.age
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 名前
+        .details-content_main-body-title_content
+          = @animal.name
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 年齢
+        .details-content_main-body-title_content
+          = @animal.age
 
-        .details-content_main-body-title
-          .label.details-content_main-body-title_info  性別
-          .details-content_main-body-title_content=animal.sex
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 性別
+        .details-content_main-body-title_content
+          = @animal.sex
 
-        .details-content_main-body-title
-          .label.details-content_main-body-title_info　種類
-          .details-content_main-body-title_content=animal.kind
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info　種類
+        .details-content_main-body-title_content
+          = @animal.kind
 
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 時間
+        .details-content_main-body-title_content
+          = @animal.time
 
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 希望のルート
+        .label.details-content_main-body-title_text
+          = @animal.course
 
-        .details-content_main-body-title
-          .label.details-content_main-body-title_info 時間
-          .label.details-content_main-body-title_text=animal.time
-
-
-      .details-content_main-body_btn
-        %input{type:"submit", value:"メッセージを送る", class:"edit-btn"}
+      .details-content_main-body-title
+        .label.details-content_main-body-title_info 注意事項など
+        .label.details-content_main-body-title_text
+          = @animal.notes
+  = form_for @rooms do |f|
+    = fields_for @user_room do |e|
+      = e.hidden_field :user_id, :value => @user.id
+    .details-content_main-body_btn
+      = f.submit class:"edit-btn", value:"メッセージを送る"
+      -# %input{type:"submit", value:"メッセージを送る", class:"edit-btn"}

@@ -65,3 +65,4 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'jquery-rails'
 gem 'devise'
+gem "nokogiri", ">= 1.10.4"
